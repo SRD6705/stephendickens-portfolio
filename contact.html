@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Stephen Dickens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=27">
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .contact-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 26px;
+    text-decoration: none;
+    color: var(--ink);
+    display: block;
+  }
+  .contact-card:hover { border-color: var(--teal); }
+  .contact-card .c-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--teal-deep);
+  }
+  .contact-card .c-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 8px;
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">Stephen Dickens</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="research-process.html">Research Process</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Get In Touch</div>
+  <h1>Let's talk research.</h1>
+  <p class="hero-sub">Looking for my next UX Research opportunity: a full-time role, or a focused engagement in the meantime. The fastest way to reach me is email.</p>
+  <div class="tag-row">
+    <span class="tag">Full-Time Roles</span>
+    <span class="tag amber">Research Strategy</span>
+    <span class="tag rose">Service Design</span>
+    <span class="tag">Workshops &amp; Facilitation</span>
+  </div>
+</header>
+
+<section class="wrap-wide">
+  <div class="contact-grid">
+    <a class="contact-card" href="mailto:stephendickens.rado@gmail.com">
+      <div class="c-label">Email</div>
+      <div class="c-value">stephendickens.rado@gmail.com</div>
+    </a>
+    <a class="contact-card" href="https://linkedin.com/in/stephen-dickens" target="_blank" rel="noopener">
+      <div class="c-label">LinkedIn</div>
+      <div class="c-value">linkedin.com/in/stephen-dickens</div>
+    </a>
+    <div class="contact-card">
+      <div class="c-label">Location</div>
+      <div class="c-value">Denver Metro Area, CO</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Stephen Dickens</div>
+  <div>Denver Metro, CO</div>
+</footer>
+
+</body>
+</html>

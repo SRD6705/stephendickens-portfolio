@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Process | Stephen Dickens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=27">
+<style>
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+    align-items: start;
+  }
+  .process-card {
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: var(--radius);
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    min-height: 270px;
+  }
+  .process-card .stage-num {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--amber);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+  }
+  .stage-icon {
+    width: 34px;
+    height: 34px;
+    color: var(--amber);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .stage-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .process-card h3 {
+    color: var(--paper);
+    margin-top: 6px;
+    font-size: 1.15rem;
+    min-height: 2.6em;
+  }
+  .process-card ul {
+    margin: 14px 0 0;
+    padding-left: 18px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.95rem;
+    color: #DDE3E6;
+  }
+  .process-card li { margin-bottom: 6px; }
+  .process-card .sub-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--rose);
+    margin-top: 16px;
+    display: block;
+  }
+  .stage-summary {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.95rem;
+    color: #DDE3E6;
+    margin: 10px 0 0;
+    min-height: 4.9em;
+  }
+  .process-card details {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid rgba(247,245,240,0.15);
+  }
+  .process-card details[open] {
+    margin-top: 16px;
+  }
+  .process-card summary {
+    cursor: pointer;
+    list-style: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--amber);
+  }
+  .process-card summary::-webkit-details-marker { display: none; }
+  .process-card summary::after { content: "+ Expand Details"; }
+  .process-card details[open] summary::after { content: "\2212 Collapse Details"; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">Stephen Dickens</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="research-process.html" class="active">Research Process</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">How I Work</div>
+  <h1>Research Process</h1>
+  <p class="hero-sub">A repeatable framework, not a one-off ritual: from aligning on the question to building institutional knowledge that outlasts any single study.</p>
+</header>
+
+<section class="wrap-wide">
+  <div class="process-grid">
+
+    <div class="process-card">
+      <div class="stage-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="14.2,9.8 11.5,14.5 9.8,12.2 12.5,7.5"/></svg></div>
+      <span class="stage-num">01</span>
+      <h3>Research Foundation + Alignment</h3>
+      <p class="stage-summary">Align on the business question and get stakeholders on the same page before any research begins.</p>
+      <details>
+        <summary></summary>
+        <span class="sub-label">Strategic Discovery</span>
+        <ul>
+          <li>Identify key business objectives and metrics through stakeholder interviews</li>
+          <li>Analyze competitive landscape for opportunities and benchmarks</li>
+        </ul>
+        <span class="sub-label">Stakeholder Alignment</span>
+        <ul>
+          <li>Conduct workshops to establish shared understanding of research goals</li>
+          <li>Document agreed-upon scope and approach in a research brief</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="process-card">
+      <div class="stage-icon"><svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 16l9 5 9-5"/></svg></div>
+      <span class="stage-num">02</span>
+      <h3>Methodology + Research Design</h3>
+      <p class="stage-summary">Choose and combine the right methods, then define exactly who needs to take part.</p>
+      <details>
+        <summary></summary>
+        <span class="sub-label">Method Selection</span>
+        <ul>
+          <li>Balance qualitative and quantitative approaches based on research objectives</li>
+          <li>Apply Jobs-to-be-Done frameworks for deeper understanding of user motivations</li>
+        </ul>
+        <span class="sub-label">Participant Strategy</span>
+        <ul>
+          <li>Define clear participant profiles based on user personas and segments</li>
+          <li>Leverage multiple recruitment channels appropriate to effort and demographics</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="process-card">
+      <div class="stage-icon"><svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg></div>
+      <span class="stage-num">03</span>
+      <h3>Research Execution + Data Collection</h3>
+      <p class="stage-summary">Run the sessions, building trust fast enough to get honest, unfiltered feedback.</p>
+      <details>
+        <summary></summary>
+        <span class="sub-label">Preparation + Testing</span>
+        <ul>
+          <li>Create research protocols and discussion guides with stakeholder input</li>
+          <li>Conduct pilot sessions to refine prompts and timing</li>
+        </ul>
+        <span class="sub-label">Moderation Approach</span>
+        <ul>
+          <li>Build rapport quickly to create psychological safety for honest feedback</li>
+          <li>Document behavioral observations alongside verbal feedback</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="process-card">
+      <div class="stage-icon"><svg viewBox="0 0 24 24"><circle cx="4.5" cy="12" r="2"/><circle cx="18" cy="5.5" r="2"/><circle cx="18" cy="18.5" r="2"/><line x1="6.3" y1="11.2" x2="16.2" y2="6.3"/><line x1="6.3" y1="12.8" x2="16.2" y2="17.7"/></svg></div>
+      <span class="stage-num">04</span>
+      <h3>Analysis + Synthesis</h3>
+      <p class="stage-summary">Turn raw data into a small set of insights the business can actually act on.</p>
+      <details>
+        <summary></summary>
+        <span class="sub-label">Data Processing</span>
+        <ul>
+          <li>Organize qualitative data using thematic coding frameworks</li>
+          <li>Apply appropriate statistical analyses to quantitative data</li>
+        </ul>
+        <span class="sub-label">Insight Development</span>
+        <ul>
+          <li>Transform patterns into actionable insights through collaborative analysis</li>
+          <li>Prioritize findings based on impact to user experience and business metrics</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="process-card">
+      <div class="stage-icon"><svg viewBox="0 0 24 24"><path d="M3 9v6h3l7 4V5L6 9H3z"/><path d="M15 8.5a3.5 3.5 0 0 1 0 7"/></svg></div>
+      <span class="stage-num">05</span>
+      <h3>Communication + Activation</h3>
+      <p class="stage-summary">Tell the story in a way that drives decisions, not a report that sits in a drive.</p>
+      <details>
+        <summary></summary>
+        <span class="sub-label">Storytelling</span>
+        <ul>
+          <li>Craft compelling narratives that center the user experience</li>
+          <li>Use direct quotes to build empathy alongside the data</li>
+        </ul>
+        <span class="sub-label">Recommendation Development</span>
+        <ul>
+          <li>Develop research playbooks that standardize approaches across projects</li>
+          <li>Contribute to research operations improvements based on project learnings</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="process-card">
+      <div class="stage-icon"><svg viewBox="0 0 24 24"><polyline points="3,17 9,11 13,15 21,7"/><polyline points="15,7 21,7 21,13"/></svg></div>
+      <span class="stage-num">06</span>
+      <h3>Impact Measurement + Knowledge Management</h3>
+      <p class="stage-summary">Track whether the fix worked, and bank what was learned for the next study.</p>
+      <details>
+        <summary></summary>
+        <span class="sub-label">Outcomes Tracking</span>
+        <ul>
+          <li>Establish measurement frameworks for tracking implementation impact</li>
+          <li>Conduct follow-up research to validate improvement effectiveness</li>
+        </ul>
+        <span class="sub-label">Research Repository</span>
+        <ul>
+          <li>Maintain a centralized, reusable research repository (personas, journey maps, frameworks)</li>
+          <li>Build institutional knowledge that informs future product decisions</li>
+        </ul>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Stephen Dickens</div>
+  <div>Denver Metro, CO · <a href="contact.html">Get in touch</a></div>
+</footer>
+
+</body>
+</html>

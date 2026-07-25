@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Listening at Scale: Sitewide Provider Survey | Stephen Dickens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=27">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">Stephen Dickens</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="case-studies.html" class="active">Case Studies</a></li>
+    <li><a href="research-process.html">Research Process</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="cs-header">
+  <div class="company mono">Healthcare Provider Portal · Survey Design</div>
+  <h1>Listening at Scale: Rebuilding the Sitewide Provider Experience Survey</h1>
+  <div class="tag-row">
+    <span class="tag">Survey Design</span>
+    <span class="tag">Quantitative Research</span>
+    <span class="tag amber">Thematic Coding</span>
+  </div>
+</div>
+
+<div class="skim-box">
+  <div class="stat-strip">
+    <div>
+      <span class="stat-num">~20,000</span>
+      <span class="stat-label">Valid provider responses in the first cycle</span>
+    </div>
+    <div>
+      <span class="stat-num">37%</span>
+      <span class="stat-label">Ranked Benefits &amp; Eligibility as their #1 improvement priority</span>
+    </div>
+    <div>
+      <span class="stat-num">2 → 1</span>
+      <span class="stat-label">Two provider portals, one streamlined instrument</span>
+    </div>
+  </div>
+
+  <div class="problem-outcome">
+    <strong>Problem:</strong> The legacy provider survey had been triggered so often, per session, that it frustrated providers enough to get disabled entirely, leaving Digital and Line-of-Business partners without the data they needed to justify feature funding.<br><br>
+    <strong>Outcome:</strong> Redesigned it as a role-personalized, bi-annual instrument across both provider portals, explicitly positioned as one input in a broader research stack. The first cycle immediately surfaced a clear, prioritized signal for where the product roadmap should focus next.
+  </div>
+</div>
+
+<details class="full-detail">
+  <summary>Read the full case study</summary>
+  <div class="detail-body">
+
+    <h3>Project Brief</h3>
+    <p>The Digital team inherited ownership of an existing sitewide survey running across two provider portals. That survey had been triggered so frequently, per session, that it frustrated providers, enough that the team disabled it entirely while figuring out how a sitewide instrument could actually serve Digital and Line-of-Business (LOB) partners going forward. At the same time, Digital and LOB stakeholders needed actionable data to justify funding for both net-new features and enhancements, particularly anything that could reduce inbound call volume. I was asked to draft the question set and design principles for a redesigned, far less intrusive version of the survey.</p>
+
+    <figure class="cs-visual">
+      <svg viewBox="0 0 640 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="triggerTitle triggerDesc">
+        <title id="triggerTitle">Survey trigger frequency, before and after</title>
+        <desc id="triggerDesc">Recreated diagram showing the old survey firing unpredictably many times per session across the year, versus the redesigned survey firing only twice a year in two clean four-week windows.</desc>
+        <rect x="0" y="0" width="640" height="210" rx="6" fill="#F0EDF2"/>
+
+        <text x="20" y="28" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" fill="#5E1B2E">OLD: SESSION-TRIGGERED (DISABLED)</text>
+        <line x1="20" y1="46" x2="620" y2="46" stroke="#DCD7E0" stroke-width="2"/>
+        <circle cx="45" cy="46" r="4" fill="#872642"/><circle cx="72" cy="46" r="4" fill="#872642"/><circle cx="98" cy="46" r="4" fill="#872642"/>
+        <circle cx="140" cy="46" r="4" fill="#872642"/><circle cx="160" cy="46" r="4" fill="#872642"/><circle cx="205" cy="46" r="4" fill="#872642"/>
+        <circle cx="230" cy="46" r="4" fill="#872642"/><circle cx="250" cy="46" r="4" fill="#872642"/><circle cx="290" cy="46" r="4" fill="#872642"/>
+        <circle cx="330" cy="46" r="4" fill="#872642"/><circle cx="350" cy="46" r="4" fill="#872642"/><circle cx="370" cy="46" r="4" fill="#872642"/>
+        <circle cx="410" cy="46" r="4" fill="#872642"/><circle cx="440" cy="46" r="4" fill="#872642"/><circle cx="470" cy="46" r="4" fill="#872642"/>
+        <circle cx="500" cy="46" r="4" fill="#872642"/><circle cx="530" cy="46" r="4" fill="#872642"/><circle cx="560" cy="46" r="4" fill="#872642"/><circle cx="590" cy="46" r="4" fill="#872642"/>
+        <text x="20" y="72" font-family="Source Serif 4, serif" font-size="11" fill="#7A7387">Every dot is a pop-up a provider could hit: unpredictable, no pattern.</text>
+
+        <text x="20" y="112" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" fill="#5E1B2E">NEW: TIME-BOXED, TWICE A YEAR</text>
+        <line x1="20" y1="130" x2="620" y2="130" stroke="#DCD7E0" stroke-width="2"/>
+        <rect x="110" y="122" width="60" height="16" rx="3" fill="#F6C026"/>
+        <rect x="430" y="122" width="60" height="16" rx="3" fill="#F6C026"/>
+        <text x="140" y="134" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#4C4556">4 WKS</text>
+        <text x="460" y="134" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#4C4556">4 WKS</text>
+        <text x="20" y="158" font-family="Source Serif 4, serif" font-size="11" fill="#7A7387">Two predictable windows a year, everything else is quiet.</text>
+
+        <text x="20" y="196" font-family="IBM Plex Mono, monospace" font-size="10" fill="#7A7387">Recreated diagram, illustrative, not the original triggering logs.</text>
+      </svg>
+      <figcaption>The old survey's unpredictable frequency was the direct cause of the fatigue that got it disabled.</figcaption>
+    </figure>
+
+    <h3>My Role</h3>
+    <p>I led the end-to-end redesign: auditing the legacy instrument, defining the new measurement model, writing and structuring the survey itself, and coordinating with design, analytics, and platform partners to launch it across both portals.</p>
+
+    <h3>Approach</h3>
+    <ul>
+      <li>Replaced the old session-triggered pop-up (the direct cause of the fatigue that got the survey disabled) with a predictable, time-boxed window that runs twice a year for four weeks, keeping data comparable cycle over cycle</li>
+      <li>Positioned the survey as one input in a broader research stack (alongside call/digital analytics, session replay, and interviews), best suited for tracking broad signals and surfacing future research topics, not for deep root-cause insight on its own</li>
+      <li>Structured the question set around Jobs-to-be-Done: which task a respondent is responsible for, which channel they use to accomplish it and why, effort, relevance to their role, frequency, and trust/confidence in the information</li>
+      <li>Built role-personalized task lists so a Behavioral Health provider, a Medical provider, and a Dental provider each see questions relevant to their own portal tasks, not a generic list</li>
+      <li>Applied a "minimize frustration, maximize relevance" design principle throughout: optional and easily dismissible, auto-saved progress, and a clear exit at any point</li>
+      <li>Designed the instrument to be a repeatable asset: built in a defined retrospective cadence (response rate, drop-off, theme saturation) so the survey itself gets evaluated and refined each cycle, not just the data it produces</li>
+    </ul>
+
+    <figure class="cs-visual">
+      <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="stackTitle stackDesc">
+        <title id="stackTitle">The survey as one input in a broader research stack</title>
+        <desc id="stackDesc">Recreated diagram showing the sitewide survey as one of five inputs, alongside call analytics, digital analytics, session replay, and interviews, feeding into product decisions.</desc>
+        <rect x="0" y="0" width="560" height="260" rx="6" fill="#F0EDF2"/>
+
+        <!-- connector lines drawn first, so boxes paint on top of them -->
+        <line x1="280" y1="61" x2="280" y2="90" stroke="#7A7387" stroke-width="1.5"/>
+        <line x1="280" y1="90" x2="185" y2="90" stroke="#7A7387" stroke-width="1.5"/>
+        <line x1="280" y1="90" x2="375" y2="90" stroke="#7A7387" stroke-width="1.5"/>
+        <line x1="280" y1="90" x2="110" y2="150" stroke="#7A7387" stroke-width="1.5"/>
+        <line x1="280" y1="90" x2="450" y2="150" stroke="#7A7387" stroke-width="1.5"/>
+        <line x1="280" y1="132" x2="280" y2="210" stroke="#7A7387" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+        <!-- boxes drawn on top, hiding the line segments that pass beneath them -->
+        <rect x="205" y="15" width="150" height="46" rx="6" fill="#872642"/>
+        <text x="280" y="43" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" fill="#F7F5F0" font-weight="600">Sitewide Survey</text>
+
+        <rect x="120" y="90" width="130" height="42" rx="6" fill="#F7F5F0" stroke="#7A7387"/>
+        <text x="185" y="116" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11.5" fill="#4C4556">Call Analytics</text>
+
+        <rect x="310" y="90" width="130" height="42" rx="6" fill="#F7F5F0" stroke="#7A7387"/>
+        <text x="375" y="116" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11.5" fill="#4C4556">Digital Analytics</text>
+
+        <rect x="45" y="150" width="130" height="42" rx="6" fill="#F7F5F0" stroke="#7A7387"/>
+        <text x="110" y="176" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11.5" fill="#4C4556">Session Replay</text>
+
+        <rect x="385" y="150" width="130" height="42" rx="6" fill="#F7F5F0" stroke="#7A7387"/>
+        <text x="450" y="176" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11.5" fill="#4C4556">Interviews</text>
+
+        <rect x="205" y="210" width="150" height="36" rx="6" fill="#F6C026"/>
+        <text x="280" y="233" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" fill="#4C4556" font-weight="600">Product Decisions</text>
+      </svg>
+      <figcaption>The survey was deliberately positioned as one signal among several, not a stand-alone source of truth.</figcaption>
+    </figure>
+
+    <h3>Key Findings</h3>
+
+    <div class="finding">
+      <span class="finding-stat">~20,000 valid responses</span> came in during the survey's first live cycle, strong participation for a redesigned instrument.
+    </div>
+
+    <div class="finding">
+      <span class="finding-stat">37% of respondents</span> named Benefits &amp; Eligibility information as their top improvement priority: the clearest single signal to come out of the first cycle.
+    </div>
+
+    <div class="finding">
+      <span class="finding-stat">Nearly 2,200 open-ended responses</span> across the two new qualitative questions surfaced recurring language patterns pointing to specific friction points the closed-ended questions alone couldn't show.
+    </div>
+
+    <div class="finding">
+      <span class="finding-stat">A known limitation:</span> the survey only reaches providers who use the portal in the first place. Those who don't (or whose portal experience is limited enough that they avoid it) are systematically underrepresented, a selection bias built into any portal-delivered instrument.
+    </div>
+
+    <h3>Recommendations &amp; What's Next</h3>
+    <ul>
+      <li>A focused deep-dive study on Benefits &amp; Eligibility, the highest-priority theme from the survey, to turn the "what" into a concrete "why" and "how to fix it"</li>
+      <li>Thematic coding of the full open-end dataset to convert raw provider language into a structured, prioritized backlog for usability testing</li>
+      <li>A living retrospective process for the survey itself, so it keeps measuring what actually matters as the portals evolve</li>
+    </ul>
+
+  </div>
+</details>
+
+<footer>
+  <div>© 2026 Stephen Dickens</div>
+  <div><a href="case-studies.html">← Back to all case studies</a></div>
+</footer>
+
+</body>
+</html>
