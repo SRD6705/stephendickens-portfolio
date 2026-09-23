@@ -6,7 +6,7 @@
 <title>Auto Refill on First Fill: Humana | CenterWell | Stephen Dickens</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=27">
+<link rel="stylesheet" href="style.css?v=28">
 </head>
 <body>
 
@@ -83,6 +83,20 @@
       <span class="finding-stat">88% of participants</span> expressed satisfaction with the overall design, specifically praising it as "clean," "simple," and "easy to navigate."
     </div>
 
+    <figure class="cs-visual">
+      <div style="background:#4C4556; border-radius:6px; padding:20px; display:flex; align-items:center; gap:24px;">
+        <svg width="90" height="90" viewBox="0 0 36 36">
+          <circle cx="18" cy="18" r="15.5" fill="none" stroke="#7A7387" stroke-width="3"/>
+          <circle cx="18" cy="18" r="15.5" fill="none" stroke="#F6C026" stroke-width="3" stroke-dasharray="88 12" stroke-dashoffset="25" transform="rotate(-90 18 18)"/>
+        </svg>
+        <div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:28px; color:#F6C026;">88%</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#F7F5F0; opacity:0.85;">EXPRESSED SATISFACTION</div>
+        </div>
+      </div>
+      <figcaption>Overall reception to the auto-refill-at-first-fill concept.</figcaption>
+    </figure>
+
     <div class="finding">
       <span class="finding-stat">62.5% of participants</span> found the "Try auto refill" modal helpful after adding a new prescription, appreciating having the option surfaced early rather than discovering it later.
       <blockquote class="pull">"I haven't seen it in this format before, but this is a nice way to do it."</blockquote>
@@ -92,6 +106,21 @@
       <span class="finding-stat">38% of participants</span> misread placeholder text ("Lipitor") as a pre-selected medication rather than an example, and a separate 38% didn't recognize radio buttons as clickable elements.
     </div>
 
+    <figure class="cs-visual">
+      <div style="background:#F0EDF2; border-radius:6px; padding:20px; position:relative;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#4C4556; margin-bottom:6px;">MEDICATION NAME</div>
+        <div style="background:#F7F5F0; border:1px solid #7A7387; border-radius:4px; padding:10px 14px; color:#A9A2B5; font-family:'Space Grotesk',sans-serif; font-size:14px; max-width:280px;">Lipitor</div>
+        <div style="margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#5E1B2E; font-weight:500;">38% thought this was pre-selected, not an example</div>
+        <div style="margin-top:20px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#4C4556;">SELECT PRESCRIBER</div>
+        <div style="display:flex; gap:14px; margin-top:6px;">
+          <div style="display:flex; align-items:center; gap:6px;"><div style="width:14px;height:14px;border-radius:50%;border:1.5px solid #7A7387;"></div><span style="font-size:13px;color:#4C4556;">Dr. Patel</span></div>
+          <div style="display:flex; align-items:center; gap:6px;"><div style="width:14px;height:14px;border-radius:50%;border:1.5px solid #7A7387;"></div><span style="font-size:13px;color:#4C4556;">Dr. Nguyen</span></div>
+        </div>
+        <div style="margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#5E1B2E; font-weight:500;">38% didn't recognize these radio buttons as clickable</div>
+      </div>
+      <figcaption>Recreated screen (unbranded): placeholder text and radio buttons were the two most misread elements on the page.</figcaption>
+    </figure>
+
     <div class="finding">
       <span class="finding-stat">Two participants</span> raised concerns about "control": for some users, automating refills can feel like surrendering autonomy over their own medication management.
     </div>
@@ -100,6 +129,12 @@
 
     <h3>Why a Small Moderated Sample Worked Here</h3>
     <p>With only 8 participants, the study efficiently surfaced major usability issues (Nielsen's heuristic suggests 5–8 participants can identify roughly 85% of usability problems), while the moderated format captured rich contextual and emotional data (like the "control" concern) that a larger quantitative survey would likely have missed entirely.</p>
+
+    <h3>What I'd Do Differently</h3>
+    <div class="reflection">
+      <span class="reflection-label">Reflection</span>
+      <p>With more runway, I'd have followed the "control" concern with a dedicated follow-up study. Two participants raising autonomy concerns unprompted is a signal worth its own investigation, not a footnote in a usability readout, and this study could only surface the tension, not resolve it.</p>
+    </div>
 
   </div>
 </details>

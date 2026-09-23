@@ -6,7 +6,7 @@
 <title>Bridging Knowledge Gaps: Schwab's Learn Section | Stephen Dickens</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=27">
+<link rel="stylesheet" href="style.css?v=28">
 </head>
 <body>
 
@@ -60,6 +60,31 @@
 
     <h3>Project Brief</h3>
     <p>Millions of investors visit Schwab.com seeking educational content to make informed financial decisions, yet the Learn section's proposed learning path presented unexpected friction. Through 11 in-depth user interviews, I investigated whether users could successfully discover, start, and complete courses, including a real-world scenario where participants began a course on desktop during work hours and picked it back up on mobile during their commute.</p>
+
+    <figure class="cs-visual">
+      <div style="background:#F0EDF2; border-radius:6px; padding:24px; display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div style="width:140px; height:90px; background:#F7F5F0; border:1.5px solid #7A7387; border-radius:6px; padding:10px; text-align:left;">
+            <div style="height:6px; width:70%; background:#DCD7E0; border-radius:2px; margin-bottom:6px;"></div>
+            <div style="height:6px; width:90%; background:#DCD7E0; border-radius:2px; margin-bottom:6px;"></div>
+            <div style="height:16px; width:50%; background:#872642; border-radius:3px; margin-top:8px;"></div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#4C4556; margin-top:8px;">DESKTOP · WORK HOURS</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; color:#5E1B2E; font-weight:600;">Starts a course</div>
+        </div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:24px; color:#7A7387;">→</div>
+        <div style="text-align:center;">
+          <div style="width:70px; height:110px; background:#F7F5F0; border:1.5px solid #7A7387; border-radius:10px; padding:10px 8px; margin:0 auto; text-align:left;">
+            <div style="height:5px; width:80%; background:#DCD7E0; border-radius:2px; margin-bottom:5px;"></div>
+            <div style="height:5px; width:60%; background:#DCD7E0; border-radius:2px; margin-bottom:8px;"></div>
+            <div style="height:14px; width:70%; background:#F6C026; border-radius:3px;"></div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#4C4556; margin-top:8px;">MOBILE · COMMUTE</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; color:#5E1B2E; font-weight:600;">Resumes same course?</div>
+        </div>
+      </div>
+      <figcaption>This exact handoff scenario is what the study's 11 interviews were built to test.</figcaption>
+    </figure>
 
     <h3>Research Goal &amp; Focus</h3>
     <p>The goal was to understand whether users could successfully navigate the learning path at each step, based on the information and visual cues in the prototype. Specifically:</p>
@@ -127,6 +152,12 @@
     <p><strong>Elevate the entry point.</strong> The Learning Path CTA needs to read as the start of a journey, not a competing element on a content-rich page. Bringing it above the fold and increasing its visual weight solves this directly.</p>
     <p><strong>Signpost the journey.</strong> Consistent, predictable cues at every intersection (a CTA, a pop-up, a new page) so users always know where they are and what happens next, building trust as they move through the content.</p>
     <p><strong>Close the loop on completion.</strong> Offer clearly labeled next-step choices at natural completion points, rather than a single ambiguous "Continue" button that can drop users back into content they thought they'd finished.</p>
+
+    <h3>What I'd Do Differently</h3>
+    <div class="reflection">
+      <span class="reflection-label">Reflection</span>
+      <p>If I ran this again, I'd push for a lightweight quantitative follow-up after launch to confirm the CTA and signposting changes actually moved completion rates, rather than relying solely on qualitative signal from 11 interviews. Qualitative research is excellent at explaining why something breaks; it's weaker at proving a fix worked at scale.</p>
+    </div>
 
   </div>
 </details>
