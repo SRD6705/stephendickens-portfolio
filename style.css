@@ -287,11 +287,25 @@ section.divider { border-top: 1px solid var(--line); }
 .cs-card h3 { margin-top: 8px; font-size: 1.15rem; }
 
 .cs-card .cs-stat {
+  display: inline-block;
   margin-top: 14px;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  color: var(--teal-deep);
+  font-size: 0.85rem;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
 }
+
+.cs-card.variant-maroon { background: rgba(135,38,66,0.06); border-color: rgba(135,38,66,0.3); }
+.cs-card.variant-maroon .cs-stat { background: var(--teal); color: var(--paper); }
+
+.cs-card.variant-gold { background: rgba(246,192,38,0.12); border-color: rgba(246,192,38,0.4); }
+.cs-card.variant-gold .cs-stat { background: var(--amber); color: var(--ink); }
+
+.cs-card.variant-blue { background: rgba(160,211,249,0.16); border-color: rgba(160,211,249,0.55); }
+.cs-card.variant-blue .cs-stat { background: var(--rose); color: var(--ink); }
 
 /* -------- Case study page -------- */
 .cs-header {
