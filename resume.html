@@ -23,6 +23,35 @@
   .print-btn { margin-top: 10px; }
   @media print {
     .site-nav, footer, .print-btn { display: none; }
+
+    @page { margin: 0.5in; size: letter; }
+
+    body { font-size: 10.5pt; line-height: 1.35; }
+
+    .hero { padding: 0 0 10pt; max-width: none; }
+    .hero .eyebrow { font-size: 9pt; margin-bottom: 2pt; }
+    .hero h1 { font-size: 20pt; max-width: none; }
+    .hero-sub { font-size: 10.5pt; max-width: none; margin-top: 3pt; }
+
+    section { padding: 8pt 0; }
+    section.divider { border-top: 0.5pt solid #ccc; }
+    .wrap, .wrap-wide { max-width: none; padding: 0; }
+    .wrap > p, .wrap > ul { max-width: none; }
+
+    h2 { font-size: 13pt; margin-bottom: 4pt; }
+
+    .skills-block { margin-bottom: 8pt; }
+    .skills-block h3 { font-size: 10pt; margin-bottom: 2pt; }
+    .skills-block p { font-size: 10pt; line-height: 1.3; max-width: none; }
+
+    .job { margin-bottom: 10pt; }
+    .job-head h3 { font-size: 11pt; }
+    .job-meta { font-size: 8.5pt; }
+    .job-role { font-size: 9.5pt; margin: 2pt 0 4pt; }
+    .job p { font-size: 10pt; margin: 0 0 3pt; }
+    .job ul { margin: 3pt 0 0; padding-left: 16pt; }
+    .job li { font-size: 10pt; margin-bottom: 3pt; }
+    .job li:last-child { margin-bottom: 0; }
   }
 </style>
 </head>
