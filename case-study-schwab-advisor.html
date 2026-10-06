@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choosing What to Build: Schwab's Advisor Platform | Stephen Dickens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=29">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">Stephen Dickens</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="case-studies.html" class="active">Case Studies</a></li>
+    <li><a href="research-process.html">Research Process</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="cs-header">
+  <div class="company mono">Charles Schwab · Advisor Platform Feature Prioritization</div>
+  <h1>Choosing What to Build: Prioritizing Features for Schwab's Advisor Platform</h1>
+  <div class="tag-row">
+    <span class="tag">MaxDiff Survey</span>
+    <span class="tag">Survey Design</span>
+    <span class="tag amber">Hierarchical Bayes</span>
+    <span class="tag rose">Low-Fi Usability</span>
+  </div>
+</div>
+
+<div class="skim-box">
+  <div class="stat-strip">
+    <div>
+      <span class="stat-num">13</span>
+      <span class="stat-label">Candidate features ranked by importance</span>
+    </div>
+    <div>
+      <span class="stat-num">200+</span>
+      <span class="stat-label">Financial advisors surveyed</span>
+    </div>
+    <div>
+      <span class="stat-num">3</span>
+      <span class="stat-label">Priority features identified</span>
+    </div>
+  </div>
+
+  <div class="problem-outcome">
+    <strong>Problem:</strong> The product team had a list of 13 potential features for the Schwab Advisor Platform and needed to know which would matter most to financial advisors before committing design and development resources.<br><br>
+    <strong>Outcome:</strong> A MaxDiff survey and a follow-up usability study narrowed the focus to three priority features, gave the product owner evidence of what advisors actually wanted, and shaped the design direction before anything moved into development.
+  </div>
+</div>
+
+<details class="full-detail">
+  <summary>Read the full case study</summary>
+  <div class="detail-body">
+
+    <h3>Project Brief</h3>
+    <p>The Schwab Advisor Platform had 13 potential new features and limited capacity to build them. Before committing design and development resources, the product team needed to know which features mattered most to the financial advisors who would use them, and then how the most valuable ones should fit into an advisor's workflow. I designed and ran a two-part study to answer both questions: a quantitative ranking, followed by a qualitative check on design direction.</p>
+
+    <h3>My Role</h3>
+    <ul>
+      <li>Survey design, including feature definitions, MaxDiff structure, and screening criteria</li>
+      <li>Launching the survey and monitoring response quality</li>
+      <li>Analysis and synthesis of the quantitative results</li>
+      <li>Planning, moderating, and synthesizing the usability study</li>
+      <li>Presenting combined findings and recommendations to product and design partners</li>
+    </ul>
+
+    <h3>Approach</h3>
+    <ul>
+      <li><strong>Inputs:</strong> Reviewed behavioral analytics and findings from prior usability studies to shape the feature list and the survey design</li>
+      <li><strong>Quantitative:</strong> Ran a MaxDiff survey with 200+ financial advisors to prioritize the 13 features. I built the structure from scratch by adapting a UserTesting stack-ranking survey, so advisors repeatedly chose the most-wanted and least-wanted feature from small sets, with every feature compared against the others. MaxDiff forces tradeoffs between features, rather than asking advisors to rate each one in isolation</li>
+      <li><strong>Analysis:</strong> Used Hierarchical Bayes estimation to generate individual-level utility scores for each feature, then converted them into relative importance scores to rank all 13 features</li>
+      <li><strong>Triangulation:</strong> Compared the results against existing behavioral data to check where stated preferences and actual usage aligned</li>
+      <li><strong>Qualitative:</strong> Followed with a low-fidelity usability study with advisors to evaluate design direction for the top features</li>
+      <li><strong>Synthesis:</strong> Combined the ranking and the usability findings into one readout for product and design</li>
+    </ul>
+
+    <figure class="cs-visual" style="max-width:860px;">
+      <svg viewBox="0 0 760 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="flowTitle flowDesc">
+        <title id="flowTitle">Study flow from inputs to design direction</title>
+        <desc id="flowDesc">Recreated process diagram showing five stages: inputs, a 13-feature list, a MaxDiff survey with 200 plus advisors, Hierarchical Bayes analysis that ranks the features, and a low-fidelity usability study on the top three features.</desc>
+        <rect x="0" y="0" width="760" height="160" rx="6" fill="#F0EDF2"/>
+
+        <text x="152" y="20" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" font-weight="500" fill="#4C4556">SETUP</text>
+        <line x1="10" y1="28" x2="294" y2="28" stroke="#7A7387" stroke-width="2"/>
+        <text x="456" y="20" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" font-weight="500" fill="#872642">QUANT</text>
+        <line x1="314" y1="28" x2="598" y2="28" stroke="#872642" stroke-width="2"/>
+        <text x="684" y="20" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" font-weight="500" fill="#4C4556">QUAL</text>
+        <line x1="618" y1="28" x2="750" y2="28" stroke="#F6C026" stroke-width="3"/>
+
+        <line x1="144" y1="86" x2="154" y2="86" stroke="#7A7387" stroke-width="1.5"/><polygon points="160,86 153,82 153,90" fill="#7A7387"/>
+        <line x1="296" y1="86" x2="306" y2="86" stroke="#7A7387" stroke-width="1.5"/><polygon points="312,86 305,82 305,90" fill="#7A7387"/>
+        <line x1="448" y1="86" x2="458" y2="86" stroke="#7A7387" stroke-width="1.5"/><polygon points="464,86 457,82 457,90" fill="#7A7387"/>
+        <line x1="600" y1="86" x2="610" y2="86" stroke="#7A7387" stroke-width="1.5"/><polygon points="616,86 609,82 609,90" fill="#7A7387"/>
+
+        <rect x="10" y="40" width="132" height="92" rx="6" fill="#F7F5F0" stroke="#7A7387"/>
+        <text x="76" y="64" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#4C4556">Inputs</text>
+        <text x="76" y="84" text-anchor="middle" font-family="Source Serif 4, serif" font-size="10.5" fill="#4C4556">Behavioral analytics</text>
+        <text x="76" y="98" text-anchor="middle" font-family="Source Serif 4, serif" font-size="10.5" fill="#4C4556">and prior usability</text>
+        <text x="76" y="112" text-anchor="middle" font-family="Source Serif 4, serif" font-size="10.5" fill="#4C4556">studies</text>
+
+        <rect x="162" y="40" width="132" height="92" rx="6" fill="#F7F5F0" stroke="#7A7387"/>
+        <text x="228" y="64" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#4C4556">13 features</text>
+        <text x="228" y="84" text-anchor="middle" font-family="Source Serif 4, serif" font-size="10.5" fill="#4C4556">Feature definitions</text>
+        <text x="228" y="98" text-anchor="middle" font-family="Source Serif 4, serif" font-size="10.5" fill="#4C4556">and survey design</text>
+
+        <rect x="314" y="40" width="132" height="92" rx="6" fill="#872642"/>
+        <text x="380" y="64" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#F7F5F0">MaxDiff survey</text>
+        <text x="380" y="84" text-anchor="middle" font-family="Source Serif 4, serif" font-size="10.5" fill="#F0EDF2">200+ financial</text>
+        <text x="380" y="98" text-anchor="middle" font-family="Source Serif 4, serif" font-size="10.5" fill="#F0EDF2">advisors</text>
+
+        <rect x="466" y="40" width="132" height="92" rx="6" fill="#872642"/>
+        <text x="532" y="64" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#F7F5F0">Analysis</text>
+        <text x="532" y="84" text-anchor="middle" font-family="Source Serif 4, serif" font-size="10.5" fill="#F0EDF2">Hierarchical Bayes</text>
+        <text x="532" y="98" text-anchor="middle" font-family="Source Serif 4, serif" font-size="10.5" fill="#F0EDF2">utility scores, ranked</text>
+        <text x="532" y="112" text-anchor="middle" font-family="Source Serif 4, serif" font-size="10.5" fill="#F0EDF2">by importance</text>
+
+        <rect x="618" y="40" width="132" height="92" rx="6" fill="#F6C026"/>
+        <text x="684" y="64" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#4C4556">Top 3 features</text>
+        <text x="684" y="84" text-anchor="middle" font-family="Source Serif 4, serif" font-size="10.5" fill="#4C4556">Low-fi usability</text>
+        <text x="684" y="98" text-anchor="middle" font-family="Source Serif 4, serif" font-size="10.5" fill="#4C4556">study with advisors</text>
+
+        <text x="10" y="152" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#7A7387">Recreated process diagram, illustrative.</text>
+      </svg>
+      <figcaption>The quantitative ranking decided which features to design; the qualitative study shaped how they should work.</figcaption>
+    </figure>
+
+    <figure class="cs-visual">
+      <div style="background:#F0EDF2; border-radius:6px; padding:20px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#5E1B2E; text-transform:uppercase; margin-bottom:8px;">Illustrative MaxDiff task</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; color:#4C4556; margin-bottom:14px;">Of these four features, which matters most and which matters least to your work?</div>
+        <div style="display:grid; grid-template-columns:1fr 64px 64px; align-items:center;">
+          <div></div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#7A7387; text-align:center; padding-bottom:6px;">MOST</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#7A7387; text-align:center; padding-bottom:6px;">LEAST</div>
+
+          <div style="font-size:14px; color:#4C4556; padding:9px 0; border-top:1px solid #DCD7E0;">Feature A</div>
+          <div style="padding:9px 0; border-top:1px solid #DCD7E0; display:flex; justify-content:center;"><div style="width:16px; height:16px; border-radius:50%; border:1.5px solid #872642; background:#872642;"></div></div>
+          <div style="padding:9px 0; border-top:1px solid #DCD7E0; display:flex; justify-content:center;"><div style="width:16px; height:16px; border-radius:50%; border:1.5px solid #7A7387;"></div></div>
+
+          <div style="font-size:14px; color:#4C4556; padding:9px 0; border-top:1px solid #DCD7E0;">Feature B</div>
+          <div style="padding:9px 0; border-top:1px solid #DCD7E0; display:flex; justify-content:center;"><div style="width:16px; height:16px; border-radius:50%; border:1.5px solid #7A7387;"></div></div>
+          <div style="padding:9px 0; border-top:1px solid #DCD7E0; display:flex; justify-content:center;"><div style="width:16px; height:16px; border-radius:50%; border:1.5px solid #7A7387;"></div></div>
+
+          <div style="font-size:14px; color:#4C4556; padding:9px 0; border-top:1px solid #DCD7E0;">Feature C</div>
+          <div style="padding:9px 0; border-top:1px solid #DCD7E0; display:flex; justify-content:center;"><div style="width:16px; height:16px; border-radius:50%; border:1.5px solid #7A7387;"></div></div>
+          <div style="padding:9px 0; border-top:1px solid #DCD7E0; display:flex; justify-content:center;"><div style="width:16px; height:16px; border-radius:50%; border:1.5px solid #F6C026; background:#F6C026;"></div></div>
+
+          <div style="font-size:14px; color:#4C4556; padding:9px 0; border-top:1px solid #DCD7E0; border-bottom:1px solid #DCD7E0;">Feature D</div>
+          <div style="padding:9px 0; border-top:1px solid #DCD7E0; border-bottom:1px solid #DCD7E0; display:flex; justify-content:center;"><div style="width:16px; height:16px; border-radius:50%; border:1.5px solid #7A7387;"></div></div>
+          <div style="padding:9px 0; border-top:1px solid #DCD7E0; border-bottom:1px solid #DCD7E0; display:flex; justify-content:center;"><div style="width:16px; height:16px; border-radius:50%; border:1.5px solid #7A7387;"></div></div>
+        </div>
+      </div>
+      <figcaption>Recreated, generic example (not actual survey content): advisors choose one most and one least important feature from a small set, repeated across many sets so every feature can be ranked.</figcaption>
+    </figure>
+
+    <h3>Outcomes</h3>
+
+    <div class="finding">
+      <span class="finding-stat">Three priority features.</span> The MaxDiff results narrowed the team's focus from 13 candidate features to three.
+    </div>
+
+    <div class="finding">
+      <span class="finding-stat">Evidence that challenged assumptions.</span> The ranking gave the product owner evidence of what advisors wanted, which ran counter to what other stakeholders expected the priorities to be.
+    </div>
+
+    <div class="finding">
+      <span class="finding-stat">Workflow fit before development.</span> The usability study showed how advisors expected those features to fit into their workflow, which shaped the design direction before anything moved into development.
+    </div>
+
+    <h3>What I'd Do Differently</h3>
+    <div class="reflection">
+      <span class="reflection-label">Reflection</span>
+      <p>The results ran counter to what some stakeholders expected, which is exactly when evidence needs to be trusted by everyone, not just the product owner. If I ran this again, I'd bring the stakeholders most likely to disagree into the feature definitions earlier, so the ranking carried their trust as well as the product owner's.</p>
+    </div>
+
+  </div>
+</details>
+
+<footer>
+  <div>© 2026 Stephen Dickens</div>
+  <div><a href="case-studies.html">← Back to all case studies</a></div>
+</footer>
+
+</body>
+</html>
