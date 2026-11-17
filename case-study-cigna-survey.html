@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Listening at Scale: Sitewide Provider Survey | Stephen Dickens</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=29">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=33">
 </head>
 <body>
 
@@ -24,11 +24,12 @@
 <div class="cs-header">
   <div class="company mono">Healthcare Provider Portal · Survey Design</div>
   <h1>Listening at Scale: Rebuilding the Sitewide Provider Experience Survey</h1>
-  <div class="tag-row">
-    <span class="tag">Survey Design</span>
-    <span class="tag">Quantitative Research</span>
-    <span class="tag amber">Thematic Coding</span>
-  </div>
+  <dl class="study-facts">
+    <div><dt>Method</dt><dd>Survey design, thematic coding</dd></div>
+    <div><dt>Sample</dt><dd>~20,000 provider responses, first cycle</dd></div>
+    <div><dt>My role</dt><dd>Led the redesign end to end</dd></div>
+    <div><dt>Cadence</dt><dd>Twice a year, four-week windows</dd></div>
+  </dl>
 </div>
 
 <div class="skim-box">
@@ -54,7 +55,7 @@
 </div>
 
 <details class="full-detail">
-  <summary>Read the full case study</summary>
+  <summary><span class="when-closed">Read the full case study</span><span class="when-open">The full case study</span></summary>
   <div class="detail-body">
 
     <h3>Project Brief</h3>
@@ -64,10 +65,10 @@
       <svg viewBox="0 0 640 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="triggerTitle triggerDesc">
         <title id="triggerTitle">Survey trigger frequency, before and after</title>
         <desc id="triggerDesc">Recreated diagram showing the old survey firing unpredictably many times per session across the year, versus the redesigned survey firing only twice a year in two clean four-week windows.</desc>
-        <rect x="0" y="0" width="640" height="210" rx="6" fill="#F0EDF2"/>
+        <rect x="0" y="0" width="640" height="210" rx="6" fill="#F1EEE8"/>
 
         <text x="20" y="28" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" fill="#5E1B2E">OLD: SESSION-TRIGGERED (DISABLED)</text>
-        <line x1="20" y1="46" x2="620" y2="46" stroke="#DCD7E0" stroke-width="2"/>
+        <line x1="20" y1="46" x2="620" y2="46" stroke="#DDD8CF" stroke-width="2"/>
         <circle cx="45" cy="46" r="4" fill="#872642"/><circle cx="72" cy="46" r="4" fill="#872642"/><circle cx="98" cy="46" r="4" fill="#872642"/>
         <circle cx="140" cy="46" r="4" fill="#872642"/><circle cx="160" cy="46" r="4" fill="#872642"/><circle cx="205" cy="46" r="4" fill="#872642"/>
         <circle cx="230" cy="46" r="4" fill="#872642"/><circle cx="250" cy="46" r="4" fill="#872642"/><circle cx="290" cy="46" r="4" fill="#872642"/>
@@ -77,9 +78,9 @@
         <text x="20" y="72" font-family="Source Serif 4, serif" font-size="11" fill="#7A7387">Every dot is a pop-up a provider could hit: unpredictable, no pattern.</text>
 
         <text x="20" y="112" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" fill="#5E1B2E">NEW: TIME-BOXED, TWICE A YEAR</text>
-        <line x1="20" y1="130" x2="620" y2="130" stroke="#DCD7E0" stroke-width="2"/>
-        <rect x="110" y="122" width="60" height="16" rx="3" fill="#F6C026"/>
-        <rect x="430" y="122" width="60" height="16" rx="3" fill="#F6C026"/>
+        <line x1="20" y1="130" x2="620" y2="130" stroke="#DDD8CF" stroke-width="2"/>
+        <rect x="110" y="122" width="60" height="16" rx="3" fill="#B8923A"/>
+        <rect x="430" y="122" width="60" height="16" rx="3" fill="#B8923A"/>
         <text x="140" y="134" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#4C4556">4 WKS</text>
         <text x="460" y="134" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#4C4556">4 WKS</text>
         <text x="20" y="158" font-family="Source Serif 4, serif" font-size="11" fill="#7A7387">Two predictable windows a year, everything else is quiet.</text>
@@ -106,7 +107,7 @@
       <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="stackTitle stackDesc">
         <title id="stackTitle">The survey as one input in a broader research stack</title>
         <desc id="stackDesc">Recreated diagram showing the sitewide survey as one of five inputs, alongside call analytics, digital analytics, session replay, and interviews, feeding into product decisions.</desc>
-        <rect x="0" y="0" width="560" height="260" rx="6" fill="#F0EDF2"/>
+        <rect x="0" y="0" width="560" height="260" rx="6" fill="#F1EEE8"/>
 
         <line x1="280" y1="61" x2="280" y2="90" stroke="#7A7387" stroke-width="1.5"/>
         <line x1="280" y1="90" x2="185" y2="90" stroke="#7A7387" stroke-width="1.5"/>
@@ -130,7 +131,7 @@
         <rect x="385" y="150" width="130" height="42" rx="6" fill="#F7F5F0" stroke="#7A7387"/>
         <text x="450" y="176" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11.5" fill="#4C4556">Interviews</text>
 
-        <rect x="205" y="210" width="150" height="36" rx="6" fill="#F6C026"/>
+        <rect x="205" y="210" width="150" height="36" rx="6" fill="#B8923A"/>
         <text x="280" y="233" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" fill="#4C4556" font-weight="600">Product Decisions</text>
       </svg>
       <figcaption>The survey was deliberately positioned as one signal among several, not a stand-alone source of truth.</figcaption>
@@ -167,6 +168,8 @@
       <p>If I could revisit one decision, I'd have piloted the redesigned survey with a smaller provider segment first. The selection-bias limitation we accepted going in became a real constraint we later had to design around, and a pilot would have surfaced that tradeoff before it was baked into the full rollout.</p>
     </div>
 
+    <button class="detail-close" type="button">Collapse case study</button>
+
   </div>
 </details>
 
@@ -175,5 +178,12 @@
   <div><a href="case-studies.html">← Back to all case studies</a></div>
 </footer>
 
+<script>
+document.querySelectorAll('.detail-close').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var d = b.closest('details'); d.open = false; d.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+});
+</script>
 </body>
 </html>

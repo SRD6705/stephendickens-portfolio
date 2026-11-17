@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bridging Knowledge Gaps: Schwab's Learn Section | Stephen Dickens</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=29">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=33">
 </head>
 <body>
 
@@ -24,12 +24,12 @@
 <div class="cs-header">
   <div class="company mono">Charles Schwab · Moderated Usability Study</div>
   <h1>Bridging Knowledge Gaps: Optimizing Schwab's Learn Section for Multi-Device Learning Journeys</h1>
-  <div class="tag-row">
-    <span class="tag">Moderated Usability</span>
-    <span class="tag">User Interviews</span>
-    <span class="tag amber">Mixed Method</span>
-    <span class="tag rose">Dual Device</span>
-  </div>
+  <dl class="study-facts">
+    <div><dt>Method</dt><dd>Dual-device moderated usability, think-aloud</dd></div>
+    <div><dt>Sample</dt><dd>11 dscout panelists, desktop and mobile</dd></div>
+    <div><dt>My role</dt><dd>Lead researcher, end to end</dd></div>
+    <div><dt>Timeline</dt><dd>Aug to Oct 2022</dd></div>
+  </dl>
 </div>
 
 <div class="skim-box">
@@ -50,23 +50,162 @@
 
   <div class="problem-outcome">
     <strong>Problem:</strong> Investors visiting Schwab's redesigned Learn section couldn't find, start, or resume educational courses the way the design intended, especially when switching from desktop to mobile mid-course.<br><br>
-    <strong>Outcome:</strong> Identified the exact points where navigation broke down and delivered three targeted recommendations that reshaped the learning path's entry point, signposting, and completion flow.
+    <strong>Outcome:</strong> At the time of the study, two courses were live. Research showed marketing banners were poorly placed to bring users into course overviews, and that once learners started, progress and feedback were unclear, learning objectives were hard to find, and content review sessions weren't effective. I delivered three recommendations on the entry point, signposting, and completion flow. Schwab.com's Learn tab now offers a full Courses section.
   </div>
 </div>
 
+<section class="journey-wrap" aria-labelledby="journeyTitle">
+  <h2 id="journeyTitle">Where the journey <em class="hl">broke down</em></h2>
+  <p class="j-lede">Recreated wireframes. Each stage shows where participants lost the thread, using the study's own numbers.</p>
+  <ol class="j-grid">
+    <li>
+      <figure class="j-shot">
+      <svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wireframe: a page with a small banner off to the side">
+        <title>Wireframe: a page with a small banner off to the side</title><desc>Generic page layout where the course banner sits in a corner, away from the main content.</desc>
+        <rect x="1" y="1" width="318" height="208" rx="6" fill="#FFFFFF" stroke="#DDD8CF"/>
+        <rect x="1" y="1" width="318" height="22" rx="6" fill="#F1EEE8"/><rect x="1" y="14" width="318" height="9" fill="#F1EEE8"/>
+        <circle cx="14" cy="12" r="3" fill="#DDD8CF"/><circle cx="25" cy="12" r="3" fill="#DDD8CF"/><circle cx="36" cy="12" r="3" fill="#DDD8CF"/>
+        
+ <rect x="14" y="34" width="140" height="9" rx="3" fill="#CBC5B9"/><rect x="14" y="48" width="100" height="7" rx="3" fill="#DDD8CF"/>
+ <rect x="14" y="64" width="292" height="62" rx="4" fill="#E8E4DB"/>
+ <rect x="26" y="78" width="120" height="8" rx="3" fill="#CBC5B9"/><rect x="26" y="92" width="90" height="7" rx="3" fill="#DDD8CF"/>
+ <rect x="14" y="140" width="170" height="7" rx="3" fill="#DDD8CF"/><rect x="14" y="154" width="150" height="7" rx="3" fill="#DDD8CF"/><rect x="14" y="168" width="160" height="7" rx="3" fill="#DDD8CF"/><rect x="14" y="182" width="120" height="7" rx="3" fill="#DDD8CF"/>
+ <rect x="214" y="146" width="92" height="40" rx="4" fill="#B8923A"/><rect x="224" y="158" width="52" height="6" rx="3" fill="#FFFFFF"/><rect x="224" y="170" width="36" height="6" rx="3" fill="#FFFFFF"/>
+ <rect x="208" y="140" width="104" height="52" rx="8" fill="none" stroke="#872642" stroke-width="2" stroke-dasharray="5 3"/><text x="310" y="134" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="9.5" font-style="normal" fill="#872642" font-weight="500">banner placement</text>
+
+      </svg>
+      </figure>
+      <span class="j-step">Arrival</span>
+      <h3 class="j-name">Reaching a course</h3>
+      <div class="j-stat j-text">Poor placement</div>
+      <p class="j-issue">Marketing banners were badly placed to bring users into the course overviews.</p>
+    </li>
+    <li>
+      <figure class="j-shot">
+      <svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wireframe: landing page with a low-key call to action">
+        <title>Wireframe: landing page with a low-key call to action</title><desc>Generic landing page with content cards and a quiet call to action below them that is easy to miss.</desc>
+        <rect x="1" y="1" width="318" height="208" rx="6" fill="#FFFFFF" stroke="#DDD8CF"/>
+        <rect x="1" y="1" width="318" height="22" rx="6" fill="#F1EEE8"/><rect x="1" y="14" width="318" height="9" fill="#F1EEE8"/>
+        <circle cx="14" cy="12" r="3" fill="#DDD8CF"/><circle cx="25" cy="12" r="3" fill="#DDD8CF"/><circle cx="36" cy="12" r="3" fill="#DDD8CF"/>
+        
+ <rect x="14" y="34" width="130" height="10" rx="3" fill="#CBC5B9"/><rect x="14" y="50" width="90" height="7" rx="3" fill="#DDD8CF"/>
+ <rect x="14" y="68" width="92" height="52" rx="4" fill="#E8E4DB"/><rect x="114" y="68" width="92" height="52" rx="4" fill="#E8E4DB"/><rect x="214" y="68" width="92" height="52" rx="4" fill="#E8E4DB"/>
+ <rect x="14" y="126" width="70" height="7" rx="3" fill="#DDD8CF"/><rect x="114" y="126" width="70" height="7" rx="3" fill="#DDD8CF"/><rect x="214" y="126" width="70" height="7" rx="3" fill="#DDD8CF"/>
+ <rect x="14" y="160" width="124" height="28" rx="14" fill="#F1EEE8" stroke="#DDD8CF"/>
+ <text x="76" y="178" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#7A7387">What is your goal</text>
+ <rect x="8" y="154" width="136" height="40" rx="16" fill="none" stroke="#872642" stroke-width="2" stroke-dasharray="5 3"/><text x="156" y="178" text-anchor="start" font-family="IBM Plex Mono, monospace" font-size="10" font-style="normal" fill="#872642" font-weight="500">easy to miss</text>
+
+      </svg>
+      </figure>
+      <span class="j-step">Stage 1</span>
+      <h3 class="j-name">Landing page</h3>
+      <div class="j-stat">7 of 10</div>
+      <p class="j-issue">missed the "What is your goal" call to action, the entry point to the whole path.</p>
+      <p class="j-expect">Expected something that clearly said "Start."</p>
+    </li>
+    <li>
+      <figure class="j-shot">
+      <svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wireframe: guided step screen">
+        <title>Wireframe: guided step screen</title><desc>Generic guided flow with three options and a next button, with a thought bubble asking what happens next.</desc>
+        <rect x="1" y="1" width="318" height="208" rx="6" fill="#FFFFFF" stroke="#DDD8CF"/>
+        <rect x="1" y="1" width="318" height="22" rx="6" fill="#F1EEE8"/><rect x="1" y="14" width="318" height="9" fill="#F1EEE8"/>
+        <circle cx="14" cy="12" r="3" fill="#DDD8CF"/><circle cx="25" cy="12" r="3" fill="#DDD8CF"/><circle cx="36" cy="12" r="3" fill="#DDD8CF"/>
+        
+ <rect x="14" y="34" width="38" height="6" rx="3" fill="#872642"/><rect x="56" y="34" width="38" height="6" rx="3" fill="#DDD8CF"/><rect x="98" y="34" width="38" height="6" rx="3" fill="#DDD8CF"/>
+ <rect x="14" y="52" width="150" height="10" rx="3" fill="#CBC5B9"/><rect x="14" y="68" width="110" height="7" rx="3" fill="#DDD8CF"/>
+ <rect x="14" y="86" width="92" height="42" rx="4" fill="#F1EEE8" stroke="#DDD8CF"/><rect x="114" y="86" width="92" height="42" rx="4" fill="#F1EEE8" stroke="#DDD8CF"/><rect x="214" y="86" width="92" height="42" rx="4" fill="#F1EEE8" stroke="#DDD8CF"/>
+ <rect x="24" y="102" width="56" height="7" rx="3" fill="#DDD8CF"/><rect x="124" y="102" width="56" height="7" rx="3" fill="#DDD8CF"/><rect x="224" y="102" width="56" height="7" rx="3" fill="#DDD8CF"/>
+ <rect x="222" y="170" width="84" height="26" rx="13" fill="#4C4556"/><text x="264" y="187" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#F7F5F0">Next</text>
+ <rect x="20" y="150" width="160" height="40" rx="10" fill="#FFFFFF" stroke="#872642" stroke-width="1.5"/><text x="100.0" y="174.0" text-anchor="middle" font-family="Source Serif 4, serif" font-style="italic" font-size="11" fill="#872642"><tspan x="100.0" dy="0">What happens next?</tspan></text>
+
+      </svg>
+      </figure>
+      <span class="j-step">Stage 2</span>
+      <h3 class="j-name">Guided flow</h3>
+      <div class="j-stat">~2 of 3</div>
+      <p class="j-issue">of those who noticed the call to action misjudged what would happen next.</p>
+      <p class="j-expect">Expected a personalized quiz or a curated list.</p>
+    </li>
+    <li>
+      <figure class="j-shot">
+      <svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wireframe: course overview page">
+        <title>Wireframe: course overview page</title><desc>Generic course overview with a lesson list, a start button and a browse link, with a thought bubble asking whether the user has committed.</desc>
+        <rect x="1" y="1" width="318" height="208" rx="6" fill="#FFFFFF" stroke="#DDD8CF"/>
+        <rect x="1" y="1" width="318" height="22" rx="6" fill="#F1EEE8"/><rect x="1" y="14" width="318" height="9" fill="#F1EEE8"/>
+        <circle cx="14" cy="12" r="3" fill="#DDD8CF"/><circle cx="25" cy="12" r="3" fill="#DDD8CF"/><circle cx="36" cy="12" r="3" fill="#DDD8CF"/>
+        
+ <rect x="14" y="34" width="292" height="40" rx="4" fill="#E8E4DB"/><rect x="26" y="46" width="130" height="9" rx="3" fill="#CBC5B9"/><rect x="26" y="60" width="90" height="7" rx="3" fill="#DDD8CF"/>
+ <rect x="14" y="88" width="14" height="14" rx="3" fill="none" stroke="#DDD8CF" stroke-width="2"/><rect x="36" y="91" width="120" height="7" rx="3" fill="#DDD8CF"/>
+ <rect x="14" y="110" width="14" height="14" rx="3" fill="none" stroke="#DDD8CF" stroke-width="2"/><rect x="36" y="113" width="100" height="7" rx="3" fill="#DDD8CF"/>
+ <rect x="14" y="132" width="14" height="14" rx="3" fill="none" stroke="#DDD8CF" stroke-width="2"/><rect x="36" y="135" width="110" height="7" rx="3" fill="#DDD8CF"/>
+ <rect x="14" y="154" width="14" height="14" rx="3" fill="none" stroke="#DDD8CF" stroke-width="2"/><rect x="36" y="157" width="90" height="7" rx="3" fill="#DDD8CF"/>
+ <rect x="196" y="90" width="110" height="26" rx="13" fill="#4C4556"/><text x="251" y="107" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#F7F5F0">Start course</text>
+ <text x="251" y="136" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#7A7387" text-decoration="underline">Keep browsing</text>
+ <rect x="168" y="150" width="142" height="40" rx="10" fill="#FFFFFF" stroke="#872642" stroke-width="1.5"/><text x="239.0" y="174.0" text-anchor="middle" font-family="Source Serif 4, serif" font-style="italic" font-size="11" fill="#872642"><tspan x="239.0" dy="0">Did I just commit?</tspan></text>
+
+      </svg>
+      </figure>
+      <span class="j-step">Stage 3</span>
+      <h3 class="j-name">Course page</h3>
+      <div class="j-stat">60%</div>
+      <p class="j-issue">were unsure whether they had already committed to a course or were still browsing.</p>
+    </li>
+    <li>
+      <figure class="j-shot">
+      <svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wireframe: lesson screen">
+        <title>Wireframe: lesson screen</title><desc>Generic lesson screen where several elements look alike and it is unclear which are clickable, with no clear progress or goals.</desc>
+        <rect x="1" y="1" width="318" height="208" rx="6" fill="#FFFFFF" stroke="#DDD8CF"/>
+        <rect x="1" y="1" width="318" height="22" rx="6" fill="#F1EEE8"/><rect x="1" y="14" width="318" height="9" fill="#F1EEE8"/>
+        <circle cx="14" cy="12" r="3" fill="#DDD8CF"/><circle cx="25" cy="12" r="3" fill="#DDD8CF"/><circle cx="36" cy="12" r="3" fill="#DDD8CF"/>
+        
+ <rect x="14" y="34" width="190" height="98" rx="4" fill="#E8E4DB"/><polygon points="98,70 98,98 124,84" fill="#CBC5B9"/>
+ <rect x="14" y="146" width="190" height="8" rx="4" fill="none" stroke="#872642" stroke-width="1.5" stroke-dasharray="4 3"/><text x="14" y="172" text-anchor="start" font-family="IBM Plex Mono, monospace" font-size="9.5" font-style="normal" fill="#872642" font-weight="500">progress and goals unclear</text>
+ <rect x="216" y="36" width="90" height="20" rx="10" fill="#F1EEE8" stroke="#DDD8CF"/><rect x="228" y="43" width="44" height="6" rx="3" fill="#DDD8CF"/>
+ <rect x="216" y="66" width="90" height="34" rx="4" fill="#F1EEE8" stroke="#DDD8CF"/><rect x="226" y="76" width="56" height="7" rx="3" fill="#DDD8CF"/><rect x="226" y="88" width="40" height="7" rx="3" fill="#DDD8CF"/>
+ <rect x="216" y="110" width="90" height="22" rx="4" fill="#F1EEE8" stroke="#DDD8CF"/><rect x="226" y="117" width="48" height="8" rx="2" fill="#DDD8CF"/>
+ <rect x="212" y="32" width="98" height="28" rx="10" fill="none" stroke="#872642" stroke-width="2" stroke-dasharray="5 3"/><rect x="212" y="62" width="98" height="42" rx="8" fill="none" stroke="#872642" stroke-width="2" stroke-dasharray="5 3"/><rect x="212" y="106" width="98" height="30" rx="8" fill="none" stroke="#872642" stroke-width="2" stroke-dasharray="5 3"/>
+ <text x="308" y="152" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="10" font-style="normal" fill="#872642" font-weight="500">clickable?</text>
+
+      </svg>
+      </figure>
+      <span class="j-step">Stage 4</span>
+      <h3 class="j-name">Start a lesson</h3>
+      <div class="j-stat">60%</div>
+      <p class="j-issue">could not tell what was clickable. Progress, feedback, and learning objectives were also unclear.</p>
+    </li>
+    <li>
+      <figure class="j-shot">
+      <svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wireframe: mobile course complete screen">
+        <title>Wireframe: mobile course complete screen</title><desc>Generic phone screen shown after finishing a course, with a single Continue button and a thought bubble asking where it leads.</desc>
+        <rect x="1" y="1" width="318" height="208" rx="6" fill="#FFFFFF" stroke="#DDD8CF"/>
+        <rect x="26" y="10" width="104" height="192" rx="14" fill="#F7F5F0" stroke="#7A7387" stroke-width="2"/>
+        <circle cx="78" cy="52" r="16" fill="#F1EEE8" stroke="#DDD8CF"/><path d="M70 52 l6 6 l11 -12" fill="none" stroke="#4C4556" stroke-width="2.5"/>
+        <rect x="48" y="80" width="60" height="8" rx="3" fill="#CBC5B9"/><rect x="54" y="96" width="48" height="7" rx="3" fill="#DDD8CF"/>
+        <rect x="42" y="150" width="72" height="26" rx="13" fill="#872642"/><text x="78" y="167" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#F7F5F0">Continue</text>
+        <rect x="158" y="70" width="148" height="52" rx="10" fill="#FFFFFF" stroke="#872642" stroke-width="1.5"/><text x="232.0" y="88.0" text-anchor="middle" font-family="Source Serif 4, serif" font-style="italic" font-size="11" fill="#872642"><tspan x="232.0" dy="0">I finished.</tspan><tspan x="232.0" dy="12">Where does</tspan><tspan x="232.0" dy="12">Continue go?</tspan></text>
+      </svg>
+      </figure>
+      <span class="j-step">Stage 5</span>
+      <h3 class="j-name">Finish and continue</h3>
+      <div class="j-stat j-text">Most</div>
+      <p class="j-issue">felt they had finished the first course, so expected "Continue" to open the next one.</p>
+    </li>
+  </ol>
+</section>
+
 <details class="full-detail">
-  <summary>Read the full case study</summary>
+  <summary><span class="when-closed">Read the full case study</span><span class="when-open">The full case study</span></summary>
   <div class="detail-body">
 
     <h3>Project Brief</h3>
     <p>Millions of investors visit Schwab.com seeking educational content to make informed financial decisions, yet the Learn section's proposed learning path presented unexpected friction. Through 11 in-depth user interviews, I investigated whether users could successfully discover, start, and complete courses, including a real-world scenario where participants began a course on desktop during work hours and picked it back up on mobile during their commute.</p>
 
     <figure class="cs-visual">
-      <div style="background:#F0EDF2; border-radius:6px; padding:24px; display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
+      <div style="background:#F1EEE8; border-radius:6px; padding:24px; display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
         <div style="text-align:center;">
           <div style="width:140px; height:90px; background:#F7F5F0; border:1.5px solid #7A7387; border-radius:6px; padding:10px; text-align:left;">
-            <div style="height:6px; width:70%; background:#DCD7E0; border-radius:2px; margin-bottom:6px;"></div>
-            <div style="height:6px; width:90%; background:#DCD7E0; border-radius:2px; margin-bottom:6px;"></div>
+            <div style="height:6px; width:70%; background:#DDD8CF; border-radius:2px; margin-bottom:6px;"></div>
+            <div style="height:6px; width:90%; background:#DDD8CF; border-radius:2px; margin-bottom:6px;"></div>
             <div style="height:16px; width:50%; background:#872642; border-radius:3px; margin-top:8px;"></div>
           </div>
           <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#4C4556; margin-top:8px;">DESKTOP · WORK HOURS</div>
@@ -75,12 +214,12 @@
         <div style="font-family:'Space Grotesk',sans-serif; font-size:24px; color:#7A7387;">→</div>
         <div style="text-align:center;">
           <div style="width:70px; height:110px; background:#F7F5F0; border:1.5px solid #7A7387; border-radius:10px; padding:10px 8px; margin:0 auto; text-align:left;">
-            <div style="height:5px; width:80%; background:#DCD7E0; border-radius:2px; margin-bottom:5px;"></div>
-            <div style="height:5px; width:60%; background:#DCD7E0; border-radius:2px; margin-bottom:8px;"></div>
-            <div style="height:14px; width:70%; background:#F6C026; border-radius:3px;"></div>
+            <div style="height:5px; width:80%; background:#DDD8CF; border-radius:2px; margin-bottom:5px;"></div>
+            <div style="height:5px; width:60%; background:#DDD8CF; border-radius:2px; margin-bottom:8px;"></div>
+            <div style="height:14px; width:70%; background:#B8923A; border-radius:3px;"></div>
           </div>
           <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#4C4556; margin-top:8px;">MOBILE · COMMUTE</div>
-          <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; color:#5E1B2E; font-weight:600;">Resumes same course?</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; color:#5E1B2E; font-weight:600;">Resumes on mobile</div>
         </div>
       </div>
       <figcaption>This exact handoff scenario is what the study's 11 interviews were built to test.</figcaption>
@@ -92,6 +231,18 @@
       <li>How do users find information, and which navigation elements do they notice or ignore?</li>
       <li>Does each step of the learning path match the user's mental model?</li>
     </ul>
+
+    <h3>Journey Tested</h3>
+    <p>Participants started on the Insights &amp; Education landing page and followed the prompts and messaging that open the learning path, across desktop and mobile:</p>
+    <ol>
+      <li>Insights &amp; Education landing page (web)</li>
+      <li>Guided "What is your goal" flow</li>
+      <li>Identify a course</li>
+      <li>Start a lesson</li>
+      <li>Continue the course on mobile</li>
+      <li>Start the quiz flow</li>
+    </ol>
+    <p><strong>Who took part:</strong> 11 participants from a dscout panel in 60-minute, think-aloud sessions. Six held Schwab accounts and five held TD Ameritrade accounts (two held both). Ages ranged from 26 to 64, with a median of 43, across a mix of genders, industries, and education levels. Fieldwork ran September 22 to 28, 2022.</p>
 
     <h3>My Role</h3>
     <p>I led the study end-to-end: gathering requirements from product partners, designing the moderated study alongside the UX design partner (guide, tasks, prototype), recruiting participants, conducting interviews, synthesizing findings, and presenting the report to product leadership.</p>
@@ -108,17 +259,17 @@
       <svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ctaWireTitle ctaWireDesc">
         <title id="ctaWireTitle">Generic course landing page wireframe</title>
         <desc id="ctaWireDesc">A recreated, unbranded wireframe showing a content-heavy landing page with a small call-to-action button that most participants missed.</desc>
-        <rect x="0" y="0" width="520" height="220" rx="6" fill="#F0EDF2"/>
-        <rect x="24" y="24" width="300" height="10" rx="3" fill="#DCD7E0"/>
-        <rect x="24" y="46" width="360" height="10" rx="3" fill="#DCD7E0"/>
-        <rect x="24" y="68" width="220" height="10" rx="3" fill="#DCD7E0"/>
+        <rect x="0" y="0" width="520" height="220" rx="6" fill="#F1EEE8"/>
+        <rect x="24" y="24" width="300" height="10" rx="3" fill="#DDD8CF"/>
+        <rect x="24" y="46" width="360" height="10" rx="3" fill="#DDD8CF"/>
+        <rect x="24" y="68" width="220" height="10" rx="3" fill="#DDD8CF"/>
         <rect x="300" y="100" width="140" height="34" rx="4" fill="#F7F5F0" stroke="#7A7387" stroke-width="1"/>
         <text x="370" y="121" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" fill="#4C4556">What is your goal?</text>
         <line x1="440" y1="117" x2="490" y2="80" stroke="#872642" stroke-width="1.5" stroke-dasharray="4 3"/>
         <text x="493" y="76" font-family="IBM Plex Mono, monospace" font-size="11" fill="#5E1B2E" font-weight="500">70% missed this</text>
-        <rect x="24" y="150" width="140" height="50" rx="4" fill="#F7F5F0" stroke="#DCD7E0" stroke-width="1"/>
-        <rect x="182" y="150" width="140" height="50" rx="4" fill="#F7F5F0" stroke="#DCD7E0" stroke-width="1"/>
-        <rect x="340" y="150" width="140" height="50" rx="4" fill="#F7F5F0" stroke="#DCD7E0" stroke-width="1"/>
+        <rect x="24" y="150" width="140" height="50" rx="4" fill="#F7F5F0" stroke="#DDD8CF" stroke-width="1"/>
+        <rect x="182" y="150" width="140" height="50" rx="4" fill="#F7F5F0" stroke="#DDD8CF" stroke-width="1"/>
+        <rect x="340" y="150" width="140" height="50" rx="4" fill="#F7F5F0" stroke="#DDD8CF" stroke-width="1"/>
       </svg>
       <figcaption>Recreated wireframe (unbranded): the landing page's actual CTA sat beside dense content, not above it.</figcaption>
     </figure>
@@ -146,18 +297,36 @@
       <span class="finding-stat">60% of participants</span> hesitated on interactive elements, unable to distinguish what was clickable from what wasn't.
     </div>
 
+    <div class="finding">
+      <span class="finding-stat">Marketing banners</span> were poorly placed to bring users into the course overviews, so the two live courses were hard to discover from the pages where investors were already looking.
+    </div>
+
+    <div class="finding">
+      <span class="finding-stat">Once a course started</span>, participants couldn't tell how far along they were or whether their answers had registered, because progress and feedback were unclear.
+    </div>
+
+    <div class="finding">
+      <span class="finding-stat">Learning objectives</span> weren't clear, so participants struggled to judge what a course would teach them or when they had met the goal.
+    </div>
+
+    <div class="finding">
+      <span class="finding-stat">Content review sessions</span> weren't effective at helping participants consolidate what they had just learned.
+    </div>
+
     <p>Together, these patterns told a clear story: the navigation design was creating wayfinding challenges that kept users from engaging with the learning content the way it was intended.</p>
 
     <h3>Recommendations</h3>
     <p><strong>Elevate the entry point.</strong> The Learning Path CTA needs to read as the start of a journey, not a competing element on a content-rich page. Bringing it above the fold and increasing its visual weight solves this directly.</p>
     <p><strong>Signpost the journey.</strong> Consistent, predictable cues at every intersection (a CTA, a pop-up, a new page) so users always know where they are and what happens next, building trust as they move through the content.</p>
-    <p><strong>Close the loop on completion.</strong> Offer clearly labeled next-step choices at natural completion points, rather than a single ambiguous "Continue" button that can drop users back into content they thought they'd finished.</p>
+    <p><strong>Close the loop on completion.</strong> Offer clearly labeled next-step choices at natural completion points, rather than a single ambiguous "Continue" button. Most participants felt they had finished the first course, so they expected "Continue" to open the next one, not drop them back into content they thought they'd finished.</p>
 
     <h3>What I'd Do Differently</h3>
     <div class="reflection">
       <span class="reflection-label">Reflection</span>
       <p>If I ran this again, I'd push for a lightweight quantitative follow-up after launch to confirm the CTA and signposting changes actually moved completion rates, rather than relying solely on qualitative signal from 11 interviews. Qualitative research is excellent at explaining why something breaks; it's weaker at proving a fix worked at scale.</p>
     </div>
+
+    <button class="detail-close" type="button">Collapse case study</button>
 
   </div>
 </details>
@@ -167,5 +336,12 @@
   <div><a href="case-studies.html">← Back to all case studies</a></div>
 </footer>
 
+<script>
+document.querySelectorAll('.detail-close').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var d = b.closest('details'); d.open = false; d.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+});
+</script>
 </body>
 </html>
