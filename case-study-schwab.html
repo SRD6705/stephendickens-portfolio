@@ -6,7 +6,7 @@
 <title>Bridging Knowledge Gaps: Schwab's Learn Section | Stephen Dickens</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=33">
+<link rel="stylesheet" href="style.css?v=38">
 </head>
 <body>
 
@@ -32,7 +32,11 @@
   </dl>
 </div>
 
-<div class="skim-box">
+<nav class="cs-nav" aria-label="On this page">
+  <a href="#summary">Summary</a><a href="#journey">Journey</a><a href="#sec-0">Brief</a><a href="#sec-1">Goal</a><a href="#sec-2">Method</a><a href="#sec-3">Role</a><a href="#sec-4">Findings</a><a href="#sec-5">Recommendations</a><a href="#sec-6">Reflection</a>
+</nav>
+
+<div class="skim-box" id="summary">
   <div class="stat-strip">
     <div>
       <span class="stat-num">11</span>
@@ -54,7 +58,7 @@
   </div>
 </div>
 
-<section class="journey-wrap" aria-labelledby="journeyTitle">
+<section id="journey" class="journey-wrap" aria-labelledby="journeyTitle">
   <h2 id="journeyTitle">Where the journey <em class="hl">broke down</em></h2>
   <p class="j-lede">Recreated wireframes. Each stage shows where participants lost the thread, using the study's own numbers.</p>
   <ol class="j-grid">
@@ -193,11 +197,9 @@
   </ol>
 </section>
 
-<details class="full-detail">
-  <summary><span class="when-closed">Read the full case study</span><span class="when-open">The full case study</span></summary>
-  <div class="detail-body">
+<div class="detail-body open-study">
 
-    <h3>Project Brief</h3>
+    <h3 id="sec-0">Project Brief</h3>
     <p>Millions of investors visit Schwab.com seeking educational content to make informed financial decisions, yet the Learn section's proposed learning path presented unexpected friction. Through 11 in-depth user interviews, I investigated whether users could successfully discover, start, and complete courses, including a real-world scenario where participants began a course on desktop during work hours and picked it back up on mobile during their commute.</p>
 
     <figure class="cs-visual">
@@ -225,14 +227,14 @@
       <figcaption>This exact handoff scenario is what the study's 11 interviews were built to test.</figcaption>
     </figure>
 
-    <h3>Research Goal &amp; Focus</h3>
+    <h3 id="sec-1">Research Goal &amp; Focus</h3>
     <p>The goal was to understand whether users could successfully navigate the learning path at each step, based on the information and visual cues in the prototype. Specifically:</p>
     <ul>
       <li>How do users find information, and which navigation elements do they notice or ignore?</li>
       <li>Does each step of the learning path match the user's mental model?</li>
     </ul>
 
-    <h3>Journey Tested</h3>
+    <h3 id="sec-2">Journey Tested</h3>
     <p>Participants started on the Insights &amp; Education landing page and followed the prompts and messaging that open the learning path, across desktop and mobile:</p>
     <ol>
       <li>Insights &amp; Education landing page (web)</li>
@@ -244,11 +246,11 @@
     </ol>
     <p><strong>Who took part:</strong> 11 participants from a dscout panel in 60-minute, think-aloud sessions. Six held Schwab accounts and five held TD Ameritrade accounts (two held both). Ages ranged from 26 to 64, with a median of 43, across a mix of genders, industries, and education levels. Fieldwork ran September 22 to 28, 2022.</p>
 
-    <h3>My Role</h3>
+    <h3 id="sec-3">My Role</h3>
     <p>I led the study end-to-end: gathering requirements from product partners, designing the moderated study alongside the UX design partner (guide, tasks, prototype), recruiting participants, conducting interviews, synthesizing findings, and presenting the report to product leadership.</p>
     <p class="timeline-note">Timeline: requirements &amp; discussion guide (Aug) → user interviews &amp; prototype check-ins (Sept) → synthesis &amp; final readout (Oct)</p>
 
-    <h3>Key Findings</h3>
+    <h3 id="sec-4">Key Findings</h3>
 
     <div class="finding">
       <span class="finding-stat">7 of 10 participants</span> completely missed the "What is your goal" call-to-action on the landing page, the entry point to the entire learning path.
@@ -315,21 +317,17 @@
 
     <p>Together, these patterns told a clear story: the navigation design was creating wayfinding challenges that kept users from engaging with the learning content the way it was intended.</p>
 
-    <h3>Recommendations</h3>
+    <h3 id="sec-5">Recommendations</h3>
     <p><strong>Elevate the entry point.</strong> The Learning Path CTA needs to read as the start of a journey, not a competing element on a content-rich page. Bringing it above the fold and increasing its visual weight solves this directly.</p>
     <p><strong>Signpost the journey.</strong> Consistent, predictable cues at every intersection (a CTA, a pop-up, a new page) so users always know where they are and what happens next, building trust as they move through the content.</p>
     <p><strong>Close the loop on completion.</strong> Offer clearly labeled next-step choices at natural completion points, rather than a single ambiguous "Continue" button. Most participants felt they had finished the first course, so they expected "Continue" to open the next one, not drop them back into content they thought they'd finished.</p>
 
-    <h3>What I'd Do Differently</h3>
+    <h3 id="sec-6">What I'd Do Differently</h3>
     <div class="reflection">
       <span class="reflection-label">Reflection</span>
       <p>If I ran this again, I'd push for a lightweight quantitative follow-up after launch to confirm the CTA and signposting changes actually moved completion rates, rather than relying solely on qualitative signal from 11 interviews. Qualitative research is excellent at explaining why something breaks; it's weaker at proving a fix worked at scale.</p>
     </div>
-
-    <button class="detail-close" type="button">Collapse case study</button>
-
   </div>
-</details>
 
 <footer>
   <div>© 2026 Stephen Dickens</div>
@@ -337,11 +335,27 @@
 </footer>
 
 <script>
-document.querySelectorAll('.detail-close').forEach(function (b) {
-  b.addEventListener('click', function () {
-    var d = b.closest('details'); d.open = false; d.scrollIntoView({ behavior: 'smooth', block: 'center' });
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.cs-nav a'));
+  var items = links.map(function (a) { return { a: a, el: document.getElementById(a.getAttribute('href').slice(1)) }; }).filter(function (x) { return x.el; });
+  function setOn(a) { links.forEach(function (l) { l.classList.toggle('on', l === a); }); if (a && a.scrollIntoView) { var n = a.parentNode; n.scrollLeft = a.offsetLeft - n.clientWidth / 2 + a.clientWidth / 2; } }
+  var lock = null;
+  function update() {
+    if (lock) return;
+    var line = 120, cur = items[0];
+    items.forEach(function (x) { if (x.el.getBoundingClientRect().top <= line) cur = x; });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) cur = items[items.length - 1];
+    setOn(cur.a);
+  }
+  links.forEach(function (a) {
+    a.addEventListener('click', function () {
+      setOn(a); clearTimeout(lock); lock = setTimeout(function () { lock = null; update(); }, 900);
+    });
   });
-});
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
 </script>
 </body>
 </html>

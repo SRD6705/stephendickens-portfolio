@@ -6,7 +6,7 @@
 <title>Choosing What to Build: Schwab's Advisor Platform | Stephen Dickens</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=33">
+<link rel="stylesheet" href="style.css?v=38">
 </head>
 <body>
 
@@ -32,7 +32,11 @@
   </dl>
 </div>
 
-<div class="skim-box">
+<nav class="cs-nav" aria-label="On this page">
+  <a href="#summary">Summary</a><a href="#sec-0">Context</a><a href="#sec-1">Stakes</a><a href="#sec-2">Adoption</a><a href="#sec-3">Role</a><a href="#sec-4">Method</a><a href="#sec-5">Outcome</a><a href="#sec-6">Reflection</a>
+</nav>
+
+<div class="skim-box" id="summary">
   <div class="stat-strip">
     <div>
       <span class="stat-num">10</span>
@@ -54,17 +58,15 @@
   </div>
 </div>
 
-<details class="full-detail">
-  <summary><span class="when-closed">Read the full case study</span><span class="when-open">The full case study</span></summary>
-  <div class="detail-body">
+<div class="detail-body open-study">
 
-    <h3>Ten features, limited capacity, no shared evidence</h3>
+    <h3 id="sec-0">Ten features, limited capacity, no shared evidence</h3>
     <p>The Schwab Advisor Platform had 10 potential new features and limited capacity to build them. Before committing design and development resources, the product team needed to know which features mattered most to the financial advisors who would use them, and then how the most valuable ones should fit into an advisor's workflow. I designed and ran a two-part study to answer both questions: a quantitative ranking, followed by a qualitative check on design direction.</p>
 
-    <h3>A high-stakes moment for independent advisors</h3>
+    <h3 id="sec-1">A high-stakes moment for independent advisors</h3>
     <p>Schwab Advisor Services provides the infrastructure that independent Registered Investment Advisors (RIAs) use to manage their clients' accounts, including trading and operational support. The digital onboarding platform supports one of an advisor's most time-sensitive and stressful moments: telling clients they are going independent and getting them into the Schwab system.</p>
 
-    <h3>Why adoption was stalling</h3>
+    <h3 id="sec-2">Why adoption was stalling</h3>
     <ul>
       <li><strong>Adoption:</strong> Restrictive document capabilities were keeping advisors from using the full platform</li>
       <li><strong>Advisor impact:</strong> Advisors were forced into workarounds or avoided the product altogether</li>
@@ -74,7 +76,7 @@
     <blockquote class="pull">"What advisors have said in the past is, we love your product, but we can't use it because we can't attach our contractual forms or our marketing material that we want to include in the digital package."</blockquote>
     <p class="timeline-note">Product manager, describing advisor feedback</p>
 
-    <h3>My Role</h3>
+    <h3 id="sec-3">My Role</h3>
     <ul>
       <li>Survey design, including feature definitions, MaxDiff structure, and screening criteria</li>
       <li>Launching the survey and monitoring response quality</li>
@@ -83,7 +85,7 @@
       <li>Presenting combined findings and recommendations to product and design partners</li>
     </ul>
 
-    <h3>Quant decided <em class="hl">which</em>, qual shaped <em class="hl">how</em></h3>
+    <h3 id="sec-4">Quant decided <em class="hl">which</em>, qual shaped <em class="hl">how</em></h3>
     <ul>
       <li><strong>Inputs:</strong> Reviewed behavioral analytics and findings from prior usability studies to shape the feature list and the survey design</li>
       <li><strong>Quantitative:</strong> Ran a MaxDiff survey with 200+ financial advisors to prioritize the 10 features. I built the structure from scratch by adapting UserZoom's stack-ranking question type, so advisors repeatedly chose the most-wanted and least-wanted feature from small sets. Each advisor saw 15 sets of four features, with every feature appearing six times and compared against the others. MaxDiff forces tradeoffs between features, rather than asking advisors to rate each one in isolation</li>
@@ -172,7 +174,7 @@
       <figcaption>Recreated, generic example (not actual survey content): advisors choose one most and one least important feature from a small set, repeated across many sets so every feature can be ranked.</figcaption>
     </figure>
 
-    <h3>Ten became <em class="hl">three</em>, before development started</h3>
+    <h3 id="sec-5">Ten became <em class="hl">three</em>, before development started</h3>
 
     <div class="finding">
       <span class="finding-stat">Three priority features.</span> The MaxDiff results narrowed the team's focus from 10 candidate features to three.
@@ -190,16 +192,12 @@
       <span class="finding-stat">A redirected roadmap.</span> Product used the evidence to defend its roadmap decisions and shift development effort toward the features most likely to drive platform adoption.
     </div>
 
-    <h3>What I'd Do Differently</h3>
+    <h3 id="sec-6">What I'd Do Differently</h3>
     <div class="reflection">
       <span class="reflection-label">Reflection</span>
       <p>The results ran counter to what some stakeholders expected, which is exactly when evidence needs to be trusted by everyone, not just the product owner. If I ran this again, I'd bring the stakeholders most likely to disagree into the feature definitions earlier, so the ranking carried their trust as well as the product owner's.</p>
     </div>
-
-    <button class="detail-close" type="button">Collapse case study</button>
-
   </div>
-</details>
 
 <footer>
   <div>© 2026 Stephen Dickens</div>
@@ -207,11 +205,27 @@
 </footer>
 
 <script>
-document.querySelectorAll('.detail-close').forEach(function (b) {
-  b.addEventListener('click', function () {
-    var d = b.closest('details'); d.open = false; d.scrollIntoView({ behavior: 'smooth', block: 'center' });
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.cs-nav a'));
+  var items = links.map(function (a) { return { a: a, el: document.getElementById(a.getAttribute('href').slice(1)) }; }).filter(function (x) { return x.el; });
+  function setOn(a) { links.forEach(function (l) { l.classList.toggle('on', l === a); }); if (a && a.scrollIntoView) { var n = a.parentNode; n.scrollLeft = a.offsetLeft - n.clientWidth / 2 + a.clientWidth / 2; } }
+  var lock = null;
+  function update() {
+    if (lock) return;
+    var line = 120, cur = items[0];
+    items.forEach(function (x) { if (x.el.getBoundingClientRect().top <= line) cur = x; });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) cur = items[items.length - 1];
+    setOn(cur.a);
+  }
+  links.forEach(function (a) {
+    a.addEventListener('click', function () {
+      setOn(a); clearTimeout(lock); lock = setTimeout(function () { lock = null; update(); }, 900);
+    });
   });
-});
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
 </script>
 </body>
 </html>

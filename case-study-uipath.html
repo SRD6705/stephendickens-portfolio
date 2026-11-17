@@ -6,7 +6,7 @@
 <title>Competitive Usability Study: UiPath | Stephen Dickens</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=33">
+<link rel="stylesheet" href="style.css?v=38">
 </head>
 <body>
 
@@ -32,7 +32,11 @@
   </dl>
 </div>
 
-<div class="skim-box">
+<nav class="cs-nav" aria-label="On this page">
+  <a href="#summary">Summary</a><a href="#sec-0">Brief</a><a href="#sec-1">Role</a><a href="#sec-2">Approach</a><a href="#sec-3">Findings</a><a href="#sec-4">Recommendations</a><a href="#sec-5">Reflection</a>
+</nav>
+
+<div class="skim-box" id="summary">
   <div class="stat-strip">
     <div>
       <span class="stat-num">36</span>
@@ -54,17 +58,15 @@
   </div>
 </div>
 
-<details class="full-detail">
-  <summary><span class="when-closed">Read the full case study</span><span class="when-open">The full case study</span></summary>
-  <div class="detail-body">
+<div class="detail-body open-study">
 
-    <h3>Project Brief</h3>
+    <h3 id="sec-0">Project Brief</h3>
     <p>THINK Design ran a competitive usability study for UiPath, evaluating its RPA (robotic process automation) developer tool against two competing platforms. The goal was a SWOT-level understanding of UiPath's developer experience relative to the field: not just whether it was good, but specifically where it won, where it was vulnerable, and what to fix next.</p>
 
-    <h3>My Role</h3>
+    <h3 id="sec-1">My Role</h3>
     <p>I was the lead researcher on this study for THINK Design. I designed the moderated study protocol, facilitated participant sessions, and synthesized the cross-tool findings into the SWOT analysis and prioritized recommendations delivered to UiPath's product team.</p>
 
-    <h3>Approach</h3>
+    <h3 id="sec-2">Approach</h3>
     <ul>
       <li>Ran remote, one-on-one moderated sessions on Zoom; each participant worked in their assigned tool using a think-aloud protocol</li>
       <li>Recruited 36 developers from 210 applicants (via job boards, community forums, and social channels), screened and tiered by experience level (beginner, intermediate, advanced), 12 per tool</li>
@@ -73,7 +75,7 @@
       <li>Synthesized a cross-tool SWOT analysis, grounded in verbatim participant quotes</li>
     </ul>
 
-    <h3>Key Findings</h3>
+    <h3 id="sec-3">Key Findings</h3>
 
     <figure class="cs-visual">
       <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="taskChartTitle taskChartDesc">
@@ -142,7 +144,7 @@
       <figcaption>Recreated summary of the study's SWOT synthesis for UiPath (condensed from the full analysis).</figcaption>
     </figure>
 
-    <h3>Recommendations</h3>
+    <h3 id="sec-4">Recommendations</h3>
     <ol>
       <li>Offer multiple workbench views (list view, flow view) to match different developers' mental models. Participants found them useful.</li>
       <li>Simplify sharing a workflow and setting up the orchestrator, both of which were complex and slow.</li>
@@ -171,16 +173,12 @@
       <figcaption>Recreated wireframe.</figcaption>
     </figure>
 
-    <h3>What I'd Do Differently</h3>
+    <h3 id="sec-5">What I'd Do Differently</h3>
     <div class="reflection">
       <span class="reflection-label">Reflection</span>
       <p>In retrospect, the visual-attractiveness finding deserved its own follow-up study. We flagged it and moved on to close out the engagement, but it's exactly the kind of insight that's easy to lose once a study wraps and everyone moves to the next priority.</p>
     </div>
-
-    <button class="detail-close" type="button">Collapse case study</button>
-
   </div>
-</details>
 
 <footer>
   <div>© 2026 Stephen Dickens</div>
@@ -188,11 +186,27 @@
 </footer>
 
 <script>
-document.querySelectorAll('.detail-close').forEach(function (b) {
-  b.addEventListener('click', function () {
-    var d = b.closest('details'); d.open = false; d.scrollIntoView({ behavior: 'smooth', block: 'center' });
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.cs-nav a'));
+  var items = links.map(function (a) { return { a: a, el: document.getElementById(a.getAttribute('href').slice(1)) }; }).filter(function (x) { return x.el; });
+  function setOn(a) { links.forEach(function (l) { l.classList.toggle('on', l === a); }); if (a && a.scrollIntoView) { var n = a.parentNode; n.scrollLeft = a.offsetLeft - n.clientWidth / 2 + a.clientWidth / 2; } }
+  var lock = null;
+  function update() {
+    if (lock) return;
+    var line = 120, cur = items[0];
+    items.forEach(function (x) { if (x.el.getBoundingClientRect().top <= line) cur = x; });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) cur = items[items.length - 1];
+    setOn(cur.a);
+  }
+  links.forEach(function (a) {
+    a.addEventListener('click', function () {
+      setOn(a); clearTimeout(lock); lock = setTimeout(function () { lock = null; update(); }, 900);
+    });
   });
-});
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
 </script>
 </body>
 </html>

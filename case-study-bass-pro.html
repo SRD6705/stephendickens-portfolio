@@ -6,7 +6,7 @@
 <title>Curbside + In-Store Pickup Study: Bass Pro | Cabela's | Stephen Dickens</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=33">
+<link rel="stylesheet" href="style.css?v=38">
 </head>
 <body>
 
@@ -32,7 +32,11 @@
   </dl>
 </div>
 
-<div class="skim-box">
+<nav class="cs-nav" aria-label="On this page">
+  <a href="#summary">Summary</a><a href="#sec-0">Brief</a><a href="#sec-1">Goals</a><a href="#sec-2">Role</a><a href="#sec-3">Method</a><a href="#sec-4">Findings</a><a href="#sec-5">Deliverable</a><a href="#sec-6">Reflection</a>
+</nav>
+
+<div class="skim-box" id="summary">
   <div class="stat-strip">
     <div>
       <span class="stat-num">6</span>
@@ -54,21 +58,19 @@
   </div>
 </div>
 
-<details class="full-detail">
-  <summary><span class="when-closed">Read the full case study</span><span class="when-open">The full case study</span></summary>
-  <div class="detail-body">
+<div class="detail-body open-study">
 
-    <h3>Project Brief</h3>
+    <h3 id="sec-0">Project Brief</h3>
     <p>Senior leadership noticed key competitors growing their Buy-Online-Pickup-In-Store (BOPIS) service while Bass Pro's own solution stalled, drawing negative feedback both online and in-store. Leadership commissioned a two-week rapid research sprint to evaluate the current solution, identify friction points and gaps, and develop recommendations.</p>
 
-    <h3>Research Goals</h3>
+    <h3 id="sec-1">Research Goals</h3>
     <ul>
       <li>Understand the current customer journey for BOPIS users, identifying key pain points and drop-off moments from online purchase through in-store pickup</li>
       <li>Evaluate competitive BOPIS offerings to identify features and service elements customers perceive as superior</li>
       <li>Investigate customer expectations for timing, notifications, and in-store pickup, to establish clear metrics for improvement</li>
     </ul>
 
-    <h3>My Role</h3>
+    <h3 id="sec-2">My Role</h3>
     <ul>
       <li>Gathered requirements directly from senior product leadership</li>
       <li>Collaborated with the data team to extract current BOPIS performance data</li>
@@ -79,11 +81,11 @@
       <li>Presented findings directly to senior leadership as data came in</li>
     </ul>
 
-    <h3>Methodology</h3>
+    <h3 id="sec-3">Methodology</h3>
     <p><strong>Field research:</strong> I selected 6 retailers within 5 miles of my office that offered a BOPIS solution, purchased an item online from each, and picked it up in person, timing every step of the process along the way.</p>
     <p><strong>Survey:</strong> Distributed to Bass Pro customers and to people who use BOPIS services at least once a month across a variety of retailers.</p>
 
-    <h3>Key Findings</h3>
+    <h3 id="sec-4">Key Findings</h3>
 
     <div class="finding">
       <span class="finding-stat">The single biggest friction point</span> was analog: staff had to physically answer a phone line when customers arrived for curbside pickup, while every one of the 5 peer retailers studied used a fully automated system with prompts and notifications.
@@ -97,7 +99,7 @@
       <span class="finding-stat">60% of peer retailers</span> used dedicated staff to carry products directly out to the customer's vehicle, rather than requiring the customer to come inside.
     </div>
 
-    <h3>Final Deliverable</h3>
+    <h3 id="sec-5">Final Deliverable</h3>
     <p>I built a detailed service blueprint mapping every customer touchpoint in Bass Pro's current BOPIS solution alongside its known friction points, plus a future-state blueprint showing the reduced number of steps an automated system would require. Bass Pro has since implemented an automated system to improve the omni-channel pickup experience.</p>
 
     <div class="blueprint">
@@ -218,16 +220,12 @@
       <div class="blueprint-caption">Recreated diagram: the phone call and manual retrieval step are replaced by one automated trigger.</div>
     </div>
 
-    <h3>What I'd Do Differently</h3>
+    <h3 id="sec-6">What I'd Do Differently</h3>
     <div class="reflection">
       <span class="reflection-label">Reflection</span>
       <p>Looking back, I'd have brought frontline store staff into the ideation sessions earlier. They lived the phone-line friction every shift and likely could have surfaced the automation fix even faster than the two-week desk research sprint did on its own.</p>
     </div>
-
-    <button class="detail-close" type="button">Collapse case study</button>
-
   </div>
-</details>
 
 <footer>
   <div>© 2026 Stephen Dickens</div>
@@ -235,11 +233,27 @@
 </footer>
 
 <script>
-document.querySelectorAll('.detail-close').forEach(function (b) {
-  b.addEventListener('click', function () {
-    var d = b.closest('details'); d.open = false; d.scrollIntoView({ behavior: 'smooth', block: 'center' });
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.cs-nav a'));
+  var items = links.map(function (a) { return { a: a, el: document.getElementById(a.getAttribute('href').slice(1)) }; }).filter(function (x) { return x.el; });
+  function setOn(a) { links.forEach(function (l) { l.classList.toggle('on', l === a); }); if (a && a.scrollIntoView) { var n = a.parentNode; n.scrollLeft = a.offsetLeft - n.clientWidth / 2 + a.clientWidth / 2; } }
+  var lock = null;
+  function update() {
+    if (lock) return;
+    var line = 120, cur = items[0];
+    items.forEach(function (x) { if (x.el.getBoundingClientRect().top <= line) cur = x; });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) cur = items[items.length - 1];
+    setOn(cur.a);
+  }
+  links.forEach(function (a) {
+    a.addEventListener('click', function () {
+      setOn(a); clearTimeout(lock); lock = setTimeout(function () { lock = null; update(); }, 900);
+    });
   });
-});
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
 </script>
 </body>
 </html>
